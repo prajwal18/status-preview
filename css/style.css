@@ -78,7 +78,9 @@ main div.info div.stats {
     margin-top: 50px;
     text-transform: uppercase;
     display: flex;
+    flex-flow: row wrap;
     justify-content: space-around;
+    gap: 10px;
 }
 
 main div.info div.stats > div{
@@ -90,4 +92,46 @@ main div.info div.stats > div > p {
 main div.info div.stats div:nth-child(1) h2{ text-transform: none; }
 
 
+/* Div - Attribution footer */
+div.attribution {
+    font-size: 11px; text-align: center;
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 100%;
+}
+div.attribution a { color: hsl(228, 51%, 73%); }
 
+
+/* Smaller Screens */
+@media screen and (max-width: 800px){
+    body{
+        min-width: 410px;
+    }
+
+    main{
+        grid-template-columns: none;
+        grid-template-rows: 1fr 2fr;
+        grid-template-areas: "image"
+                             "summary";
+    }
+
+    main div.image {
+        border-bottom-right-radius: 0;
+        border-top-left-radius: 10px;
+    }
+
+}
+
+/* Even Smaller Screen */
+@media screen and (max-width: 420px) {
+    body{
+        min-width: 360px;
+        text-align: center;
+    }
+
+    main div.info div.stats {
+        margin-top: 20px;
+        display: grid;
+        justify-content: center;
+    }
+}
