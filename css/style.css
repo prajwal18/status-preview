@@ -46,7 +46,7 @@ main {
 
 /* Div - Image */
 main div.image {
-    background: var(--soft-violet) url('../images/image-header-desktop.jpg') no-repeat top left;
+    background: var(--soft-violet) url('../images/image-header-desktop.jpg') no-repeat top center;
     background-blend-mode: multiply;
     background-size: cover;
     grid-area: image;
@@ -92,14 +92,15 @@ main div.info div.stats > div > p {
 main div.info div.stats div:nth-child(1) h2{ text-transform: none; }
 
 
-/* Div - Attribution footer */
-div.attribution {
+/* Footer - Attribution footer */
+footer.attribution {
     font-size: 11px; text-align: center;
+    padding: 10px;
     position: absolute;
     bottom: 0; left: 0;
     width: 100%;
 }
-div.attribution a { color: hsl(228, 51%, 73%); }
+footer.attribution a { color: hsl(228, 51%, 73%); }
 
 
 /* Smaller Screens */
@@ -124,6 +125,9 @@ div.attribution a { color: hsl(228, 51%, 73%); }
 
 /* Even Smaller Screen */
 @media screen and (max-width: 420px) {
+    h1{ font-size: 1.9em; }
+    h2{ font-size: 1.4em; }
+    
     body{
         min-width: 360px;
         text-align: center;
